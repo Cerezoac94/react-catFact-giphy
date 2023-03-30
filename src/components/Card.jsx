@@ -9,7 +9,7 @@ const Card = () => {
   return (
     <section className="container">
       <article className="card">
-				<picture><img src={gif} alt={`image obtained from giphy api using the word: ${word}`}/></picture>
+				<picture className="picture"><img src={gif} alt={`image obtained from giphy api using the word: ${word}`}/></picture>
 				<section><h2>{word}</h2></section>
         </article>
         <Button f={handleReset} title={"Reset"} />
