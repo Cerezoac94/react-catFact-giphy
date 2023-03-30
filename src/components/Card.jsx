@@ -1,18 +1,19 @@
-import { useContext } from "react"
-import { reset } from "../context/Reset"
+import { useFact } from "../hooks/useFact"
+import { useGiphy } from "../hooks/useGiphy"
 import "../style/card.css"
 import Button from "./Button"
 
-const Card = ({ word, gif }) => {
-  const { handleFlag } = useContext(reset) 
+const Card = () => {
+  const { word, handleReset } = useFact()
+	const gif = useGiphy(word)
   return (
-    <>
     <section className="container">
-      <picture><img src={gif?.images?.original?.url} alt={gif.title} /></picture>
-      <h2>{word}</h2>
-    </section>
-    <Button f={handleFlag} title="Reset"/>
-    </>
+      <article className="card">
+				<picture><img src={gif} alt={`image obtained from giphy api using the word: ${word}`}/></picture>
+				<section><h2>{word}</h2></section>
+        </article>
+        <Button f={handleReset} title={"Reset"} />
+			</section>
   )
 }
 export default Card

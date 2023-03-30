@@ -1,6 +1,13 @@
 .container{
+  width: 600px;
+  height: 500px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
 
+.card {
+  display: flex;
+  align-items: center;
 }

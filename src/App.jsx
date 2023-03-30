@@ -1,12 +1,9 @@
-import Fetch from "./components/Fetch";
-import Reset from "./context/Reset";
+import Card from "./components/Card";
 
 function App() {
 	return (
 		<main>
-			<Reset>
-				<Fetch />
-			</Reset>
+			<Card/>
 		</main>
 	);
 }
